@@ -4,6 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Método getElementById - Texto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #3b6d51; /* Verde Ghibli */
+            --primary-dark: #2e5440;
+            --bg-color: #fbfbfa;
+            --card-bg: #ffffff;
+            --text-main: #2c3e35;
+            --text-muted: #5c7065;
+            --border-color: #d1ded6;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 1rem;
+            background-image: radial-gradient(#e2ebe4 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 2.5rem;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(59, 109, 81, 0.1);
+        }
+        h1 { color: var(--primary-dark); font-size: 1.5rem; margin-bottom: 1rem; }
+        p { color: var(--text-muted); margin-bottom: 1.5rem; }
+        .resultado {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+        .btn {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn:hover { background-color: var(--primary-dark); }
+        .back { display: inline-block; margin-top: 1.5rem; color: var(--primary-blue); text-decoration: none; font-weight: 600; }
+        .back:hover { text-decoration: underline; }
+    </style>
     <script>
         function cambiarTexto() {
             // Busca el elemento con id="aviso" y cambia su contenido de texto
@@ -13,15 +75,17 @@
     </script>
 </head>
 <body>
-    <h1>Práctica getElementById</h1>
-    
-    <!-- Elemento objetivo con su ID exacto -->
-    <p id="aviso">Texto original que va a cambiar...</p>
+    <div class="card">
+        <h1>Práctica getElementById</h1>
+        
+        <!-- Elemento objetivo con su ID exacto -->
+        <p id="aviso">Texto original que va a cambiar...</p>
 
-    <!-- Botón para accionar la función -->
-    <button onclick="cambiarTexto()">Modificar Texto</button>
+        <!-- Botón para accionar la función -->
+        <button class="btn" onclick="cambiarTexto()">Modificar Texto</button>
+    </div>
 
-    <br><br>
-    <a href="../../../segundo_parcial.html">&larr; Volver al Segundo Parcial</a>
+    <!-- Enlace de regreso actualizado para estructura plana en GitHub -->
+    <a href="../../../segundo_parcial.html" class="back">&larr; Volver al Segundo Parcial</a>
 </body>
 </html>
